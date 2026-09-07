@@ -1,0 +1,55 @@
+{
+  "model": "P4",
+  "second_use_floor": "3.0 Ah absolute",
+  "solver": {
+    "method": "RK23",
+    "rtol": 1e-07,
+    "atol_floor": 1e-14,
+    "atol_relative_to_y0": 1e-09,
+    "first_step_cycles": 10.0
+  },
+  "capacity_floor_Ah": 3.0,
+  "first_protocol": [
+    1.5,
+    1.25,
+    3.1,
+    0.1
+  ],
+  "second_protocol": [
+    2.0,
+    1.25,
+    3.0,
+    0.1
+  ],
+  "EOFU_reference_state": {
+    "nLi": 0.17301961107654848,
+    "Cp": 5.526933335243084,
+    "Cn": 5.233807663519557,
+    "delta_SEI": 2.6546325004696767e-08,
+    "delta_pl": 4.381526340964325e-08
+  },
+  "rho_SEI_Ohm_m": 90000.0,
+  "rho_plating_Ohm_m": 90000.0,
+  "target_film_ASR_Ohm_m2": 0.006332542957290601,
+  "cases": [
+    {
+      "case": "low_SEI_high_plating",
+      "safe_last_cycle": 104,
+      "safe_final_capacity_Ah": 3.009331457098448,
+      "safe_final_retention": 0.6760760031307104
+    },
+    {
+      "case": "moderate_SEI_moderate_plating",
+      "safe_last_cycle": 116,
+      "safe_final_capacity_Ah": 3.000417451649301,
+      "safe_final_retention": 0.6740733838573407
+    },
+    {
+      "case": "high_SEI_low_plating",
+      "safe_last_cycle": 176,
+      "safe_final_capacity_Ah": 3.0172555435742163,
+      "safe_final_retention": 0.6778562273397658
+    }
+  ],
+  "middle_case_note": "middle case changed 2026-08-30: delta_pl = 52 nm exactly (delta_SEI = 18.36 nm), alpha_SEI = 0.2610; was 50/50"
+}

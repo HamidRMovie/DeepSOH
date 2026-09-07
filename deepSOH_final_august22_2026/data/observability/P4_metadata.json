@@ -1,0 +1,97 @@
+{
+  "model": "P4",
+  "perturbation_fraction": 0.01,
+  "perturbation_percent": 1.0,
+  "solver": {
+    "method": "RK23",
+    "rtol": 1e-07,
+    "atol_floor": 1e-14,
+    "atol_relative_to_y0": 1e-09,
+    "first_step_cycles": 10.0,
+    "max_step_cycles": null
+  },
+  "protocol": {
+    "charge_C": 2.0,
+    "discharge_C": 1.25,
+    "lower_V": 3.0,
+    "upper_V": 4.1,
+    "mid_rest_s": 10.0,
+    "cv_denominator": 50,
+    "end_rest_h": 0.1,
+    "termination": "60% capacity"
+  },
+  "historical_number_of_cycle_samples": 121,
+  "requested_number_of_cycle_samples": 121,
+  "common_number_of_cycle_samples": 121,
+  "workers": 11,
+  "total_wall_seconds": 332.35666729999997,
+  "trajectories": [
+    {
+      "label": "nominal",
+      "wall_seconds": 312.7300507,
+      "rhs_evaluations": 547,
+      "maximum_scaled_initial_error": 3.208355024151817e-16
+    },
+    {
+      "label": "nLi_plus",
+      "wall_seconds": 304.2671869,
+      "rhs_evaluations": 523,
+      "maximum_scaled_initial_error": 3.208355024151817e-16
+    },
+    {
+      "label": "nLi_minus",
+      "wall_seconds": 285.0595185,
+      "rhs_evaluations": 487,
+      "maximum_scaled_initial_error": 4.812532536227725e-16
+    },
+    {
+      "label": "Cp_plus",
+      "wall_seconds": 311.8176483,
+      "rhs_evaluations": 520,
+      "maximum_scaled_initial_error": 6.416710048303634e-16
+    },
+    {
+      "label": "Cp_minus",
+      "wall_seconds": 300.05060219999996,
+      "rhs_evaluations": 517,
+      "maximum_scaled_initial_error": 1.6970004031085584e-16
+    },
+    {
+      "label": "Cn_plus",
+      "wall_seconds": 281.400486,
+      "rhs_evaluations": 463,
+      "maximum_scaled_initial_error": 1.606999504931134e-16
+    },
+    {
+      "label": "Cn_minus",
+      "wall_seconds": 319.7241238,
+      "rhs_evaluations": 559,
+      "maximum_scaled_initial_error": 8.020887560379542e-16
+    },
+    {
+      "label": "delta_SEI_plus",
+      "wall_seconds": 304.85331540000004,
+      "rhs_evaluations": 526,
+      "maximum_scaled_initial_error": 4.812532536227725e-16
+    },
+    {
+      "label": "delta_SEI_minus",
+      "wall_seconds": 310.9024736,
+      "rhs_evaluations": 544,
+      "maximum_scaled_initial_error": 4.812532536227725e-16
+    },
+    {
+      "label": "delta_pl_plus",
+      "wall_seconds": 314.47987,
+      "rhs_evaluations": 526,
+      "maximum_scaled_initial_error": 6.416710048303634e-16
+    },
+    {
+      "label": "delta_pl_minus",
+      "wall_seconds": 300.08938459999996,
+      "rhs_evaluations": 490,
+      "maximum_scaled_initial_error": 8.020887560379542e-16
+    }
+  ],
+  "output_csv": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\solver_perturbation_comparison\\P4\\rk23_tight_old_steps_1pct\\P4_trajectory_components.csv"
+}

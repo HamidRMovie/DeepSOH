@@ -1,0 +1,14 @@
+# This deliverable ships its input data, figures and MATLAB exports, so the
+# repository-wide ignore rules for *.csv, *.png and *.mat are reversed here.
+!*.csv
+!*.png
+!*.mat
+!*.json
+!*.fig
+
+# Working artifacts that should not be published.
+*.bak
+*.bak2
+*.log
+__pycache__/
+*.pyc

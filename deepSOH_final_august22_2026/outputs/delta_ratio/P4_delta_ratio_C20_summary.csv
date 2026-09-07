@@ -1,0 +1,10 @@
+case,label,stage,actual_cycle,duration_h,minimum_voltage_V,maximum_voltage_V
+high_SEI_low_plating,90% $\delta_{\mathrm{SEI}}$ / 10% $\delta_{\mathrm{plating}}$,beginning,1,35.552628814011655,3.000010557524336,4.200000000000856
+high_SEI_low_plating,90% $\delta_{\mathrm{SEI}}$ / 10% $\delta_{\mathrm{plating}}$,end,104,30.80595253094493,3.000014554233284,4.200000000000993
+high_SEI_low_plating,90% $\delta_{\mathrm{SEI}}$ / 10% $\delta_{\mathrm{plating}}$,middle,52,33.424889060645626,3.000011988165886,4.200000000000108
+low_SEI_high_plating,10% $\delta_{\mathrm{SEI}}$ / 90% $\delta_{\mathrm{plating}}$,beginning,1,35.53719195710912,3.000010399695244,4.200000000000824
+low_SEI_high_plating,10% $\delta_{\mathrm{SEI}}$ / 90% $\delta_{\mathrm{plating}}$,end,104,24.095642838936595,3.0000769657110893,4.200000000020191
+low_SEI_high_plating,10% $\delta_{\mathrm{SEI}}$ / 90% $\delta_{\mathrm{plating}}$,middle,52,32.196949596080614,3.000013629512436,4.2000000000006406
+moderate_SEI_moderate_plating,26% $\delta_{\mathrm{SEI}}$ / 74% $\delta_{\mathrm{plating}}$,beginning,1,35.54101114237618,3.00001068869944,4.200000000000852
+moderate_SEI_moderate_plating,26% $\delta_{\mathrm{SEI}}$ / 74% $\delta_{\mathrm{plating}}$,end,104,27.072484209431188,3.0000296673747093,4.200000000012176
+moderate_SEI_moderate_plating,26% $\delta_{\mathrm{SEI}}$ / 74% $\delta_{\mathrm{plating}}$,middle,52,32.54408746218397,3.0000109051054777,4.200000000000008

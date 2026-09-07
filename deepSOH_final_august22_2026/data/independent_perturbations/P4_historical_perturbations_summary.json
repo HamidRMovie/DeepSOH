@@ -1,0 +1,244 @@
+{
+  "model": "P4 current-area plating thickness",
+  "source_perturbation_notebook": "C:\\Pybsmm dravan paper\\PyBaMM\\deepSOH\\Perturbation.ipynb",
+  "historical_legend_correction": "The old legend said 0.8 Cp; code used Cp x0.90.",
+  "solver": {
+    "method": "RK23",
+    "rtol": 1e-07,
+    "atol_floor": 1e-14,
+    "atol_relative_to_y0": 1e-09,
+    "first_step_cycles": 10.0,
+    "max_step_cycles": null
+  },
+  "first_protocol": {
+    "charge_C": 1.5,
+    "discharge_C": 1.25,
+    "lower_voltage_V": 3.1,
+    "upper_voltage_V": 4.1,
+    "cv_cutoff": "C/50",
+    "rest_hours": 0.1,
+    "cycles": 100
+  },
+  "second_protocol": {
+    "charge_C": 2.0,
+    "discharge_C": 1.25,
+    "lower_voltage_V": 3.0,
+    "upper_voltage_V": 4.1,
+    "cv_cutoff": "C/50",
+    "rest_hours": 0.1,
+    "retention_floor_relative_to_each_case_start": 0.8
+  },
+  "EOFU_reference_state": {
+    "nLi": 0.17301961107654848,
+    "Cp": 5.526933335243084,
+    "Cn": 5.233807663519557,
+    "delta_SEI": 2.6546325004696767e-08,
+    "delta_pl": 4.381526340964325e-08
+  },
+  "first_life_retention": 0.9170031504279865,
+  "first_life_seconds": 120.3185114,
+  "perturbation_cases": [
+    {
+      "case": "nominal",
+      "perturbed_state": "none",
+      "multiplier": 1.0,
+      "changed_state_count": 0
+    },
+    {
+      "case": "nLi_x0p95",
+      "perturbed_state": "nLi",
+      "multiplier": 0.95,
+      "changed_state_count": 1
+    },
+    {
+      "case": "Cp_x0p90",
+      "perturbed_state": "Cp",
+      "multiplier": 0.9,
+      "changed_state_count": 1
+    },
+    {
+      "case": "Cn_x0p90",
+      "perturbed_state": "Cn",
+      "multiplier": 0.9,
+      "changed_state_count": 1
+    },
+    {
+      "case": "plating_x2",
+      "perturbed_state": "delta_pl",
+      "multiplier": 2.0,
+      "changed_state_count": 1
+    },
+    {
+      "case": "plating_x0p5",
+      "perturbed_state": "delta_pl",
+      "multiplier": 0.5,
+      "changed_state_count": 1
+    },
+    {
+      "case": "SEI_x2",
+      "perturbed_state": "delta_SEI",
+      "multiplier": 2.0,
+      "changed_state_count": 1
+    },
+    {
+      "case": "SEI_x0p5",
+      "perturbed_state": "delta_SEI",
+      "multiplier": 0.5,
+      "changed_state_count": 1
+    }
+  ],
+  "outputs": {
+    "first_life_csv": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_optimized_first_life_trajectory.csv",
+    "second_life_csv": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_perturbed_second_life_trajectories.csv",
+    "initial_states_csv": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_historical_perturbation_initial_states.csv",
+    "combined_png": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_first_and_perturbed_second_life.png",
+    "states_png": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_perturbed_second_life_states.png",
+    "second_life_only_png": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_historical_perturbations_second_life_only.png",
+    "additional_cases_csv": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_three_additional_perturbation_cases.csv",
+    "Cp_x0p85_case_csv": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_Cp_x0p85_case.csv",
+    "delta_SEI_audit_json": "C:\\Pybsmm dravan paper\\GPT\\resuts and\\simmary\\P4_first_second_use_historical_perturbations\\P4_delta_SEI_audit.json"
+  },
+  "plot_selection": {
+    "plotted_cases": [
+      "nominal",
+      "nLi_x0p95",
+      "Cp_x0p85",
+      "Cn_x0p90",
+      "plating_x1p5",
+      "SEI_x2"
+    ],
+    "excluded_from_plots_but_retained_in_raw_data": [
+      "Cp_x0p8",
+      "Cp_x0p90",
+      "SEI_x0p1",
+      "SEI_x0p5",
+      "plating_x0p5",
+      "plating_x2"
+    ],
+    "outputs_shown": [
+      "capacity_Ah",
+      "resistance_Ohm"
+    ],
+    "legend_notation": [
+      "$\\delta_{\\mathrm{plating}}$",
+      "$\\delta_{\\mathrm{SEI}}$"
+    ]
+  },
+  "additional_requested_perturbations": [
+    {
+      "case": "SEI_x0p1",
+      "label": "$\\delta_{\\mathrm{SEI}}\\times0.1$",
+      "perturbed_state": "delta_SEI",
+      "multiplier": 0.1,
+      "initial_capacity_Ah": 4.451173304721826,
+      "initial_resistance_Ohm": 0.0109099818287779,
+      "safe_last_cycle": 100,
+      "safe_final_retention": 0.8030639019285745,
+      "simulation_seconds": 233.7801602,
+      "maximum_scaled_initial_error": 6.416746735917494e-16
+    },
+    {
+      "case": "Cp_x0p8",
+      "label": "$C_p\\times0.8$",
+      "perturbed_state": "Cp",
+      "multiplier": 0.8,
+      "initial_capacity_Ah": 3.882244603792998,
+      "initial_resistance_Ohm": 0.0124342989774829,
+      "safe_last_cycle": 118,
+      "safe_final_retention": 0.803388704797888,
+      "simulation_seconds": 303.7339807,
+      "maximum_scaled_initial_error": 6.416746735917494e-16
+    },
+    {
+      "case": "plating_x1p5",
+      "label": "$\\delta_{\\mathrm{plating}}\\times1.5$",
+      "perturbed_state": "delta_pl",
+      "multiplier": 1.5,
+      "initial_capacity_Ah": 4.451173304721826,
+      "initial_resistance_Ohm": 0.0129325295730306,
+      "safe_last_cycle": 85,
+      "safe_final_retention": 0.8000318558567722,
+      "simulation_seconds": 193.0842889,
+      "maximum_scaled_initial_error": 6.416746735917494e-16
+    }
+  ],
+  "final_requested_Cp_perturbation": {
+    "case": "Cp_x0p85",
+    "label": "$C_p\\times0.85$",
+    "perturbed_state": "Cp",
+    "multiplier": 0.85,
+    "initial_capacity_Ah": 4.124210073968379,
+    "initial_resistance_Ohm": 0.0122982556897319,
+    "safe_last_cycle": 111,
+    "safe_final_retention": 0.8017382999361055,
+    "simulation_seconds": 267.5924152,
+    "maximum_scaled_initial_error": 1.6970024058982243e-16
+  },
+  "delta_SEI_audit": {
+    "reference_delta_SEI_m": 2.6546325004696767e-08,
+    "restart_mapping": {
+      "Initial inner SEI thickness [m]": 0.0,
+      "Initial outer SEI thickness [m]": "target delta_SEI",
+      "validated_maximum_scaled_initial_error_SEI_x0p1": 6.416746735917496e-16
+    },
+    "active_SEI_option": "ec reaction limited",
+    "equation_trace": {
+      "source": "C:\\Pybsmm dravan paper\\PyBaMM_P4\\pybamm\\models\\submodels\\interface\\sei\\sei_growth.py",
+      "lines": [
+        143,
+        156
+      ],
+      "law": "j_sei = -C_sei_exp / (1 + L_sei * C_ec * C_sei_exp)",
+      "interpretation": "The active model is EC-reaction-limited, not solvent-diffusion-limited. Total SEI thickness is in an additive denominator, 1 + L_sei*C_ec*C_sei_exp; it is not the sole 1/L denominator used by the solvent-diffusion-limited option. A smaller starting thickness therefore increases SEI current and a larger one suppresses it, but the effect can be weak when the added thickness-dependent term is small relative to 1."
+    },
+    "trajectory_comparisons_to_nominal": [
+      {
+        "case": "SEI_x0p1",
+        "common_last_cycle": 100,
+        "initial_delta_SEI_m": 2.6546325004696764e-09,
+        "final_delta_SEI_m_at_common_horizon": 2.217379612124796e-08,
+        "delta_SEI_growth_m": 1.9519163620778284e-08,
+        "nominal_delta_SEI_growth_m": 1.9406789914469107e-08,
+        "initial_capacity_difference_Ah": -3.552713678800501e-15,
+        "final_capacity_difference_Ah": -0.016200854728996017,
+        "maximum_absolute_capacity_difference_Ah": 0.016200854728996017,
+        "mean_absolute_capacity_difference_Ah": 0.0035854781342727466,
+        "initial_resistance_difference_Ohm": -0.0010550830086540012,
+        "final_resistance_difference_Ohm": -0.0009290615736921998,
+        "maximum_absolute_resistance_difference_Ohm": 0.0010664332199579012,
+        "nLi_loss_mol": 0.032953885531149224,
+        "nominal_nLi_loss_mol": 0.03235161189496771
+      },
+      {
+        "case": "SEI_x2",
+        "common_last_cycle": 101,
+        "initial_delta_SEI_m": 5.3092650009393534e-08,
+        "final_delta_SEI_m_at_common_horizon": 7.256463270506877e-08,
+        "delta_SEI_growth_m": 1.947198269567524e-08,
+        "nominal_delta_SEI_growth_m": 1.9580445215972534e-08,
+        "initial_capacity_difference_Ah": -1.7763568394002505e-15,
+        "final_capacity_difference_Ah": 0.018199568090604856,
+        "maximum_absolute_capacity_difference_Ah": 0.018199568090604856,
+        "mean_absolute_capacity_difference_Ah": 0.00416314939849799,
+        "initial_resistance_difference_Ohm": 0.0011723144540599986,
+        "final_resistance_difference_Ohm": 0.0010329098405606994,
+        "maximum_absolute_resistance_difference_Ohm": 0.0011847334816419992,
+        "nLi_loss_mol": 0.03223218851666371,
+        "nominal_nLi_loss_mol": 0.03290874387368861
+      }
+    ]
+  },
+  "second_use_extension_2026_09_01": {
+    "note": "The six plotted cases were re-simulated from their stored initial states to the experiment's 60% capacity termination so the life figure can be cut at 3.0 Ah instead of 3.6 Ah. Reproduction of the historical trajectories was verified at cycles 30 and 60 to 5e-4 relative before replacement. Unplotted cases keep the original runs.",
+    "script": "sim/regenerate_perturbations_to_3Ah.py",
+    "figure_cut_Ah": 3.0,
+    "cases": {
+      "nominal": 132,
+      "nLi_x0p95": 149,
+      "Cp_x0p85": 128,
+      "Cn_x0p90": 87,
+      "plating_x1p5": 109,
+      "SEI_x2": 135
+    }
+  }
+}
