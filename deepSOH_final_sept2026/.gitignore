@@ -1,0 +1,13 @@
+# This folder ships its simulation data (.mat) and figures (.png, .fig), so the
+# repository-wide ignore rules for these types are reversed here.
+!*.mat
+!*.png
+!*.fig
+
+# Working files that should not be published.
+data/_work_*/
+__pycache__/
+*.pyc
+*.log
+*.bak
+*.asv
